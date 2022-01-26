@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    box-sizing: border-box;         /*Quita los bordes de la hoja*/
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #D9E4FF;
+}
+
+header {
+    background-color: #8892F2;
+    height: 80px;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;       /*Espaciado a la izquierda para el logo */
+    max-width: 992px;   /*tamaño maximo permitido de la expansion*/
+    margin: 0 auto;     /*centrado del contenido de la navbar*/
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+nav img {
+    height: 80px;
+    width: auto;
+    padding: 0 10px;
+    line-height: 80px;
+}
+
+nav ul {
+    display: flex;
+    margin-right: 20px;
+    list-style: none;
+}
+
+nav ul li {
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;    /*Sirve para centrar el alto de las letras con la navbar*/
+    text-transform: uppercase;    /*Pone todas las letras en mayuscula*/
+    width: max-content;
+}
+
+nav ul li a:hover {
+    background-color: #6F7BEC;
+    transition: 0.5s;      /*Retardo en el que se muestra que seleccionamos ese item*/
+}
+
+.icono-hambur {
+    color: black;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    
+    display: none;
+}
+
+.informacion {
+    padding: 15px;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.sliderAuto {
+    padding: 5px 20px;
+    text-align: center;
+}
+
+#img-slider {
+    width: 85%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.piePagina {
+    display: flex;
+    justify-content: center;
+}
+
+.horarios {
+    background-color: #6F7BEC;
+    font-size: 18px;
+    width: 430px;
+    margin: 60px 60px;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.horarios #titulo {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.horarios #subtitulo {
+    font-size: 20px;
+}
+
+.horarios p {
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.cartelera {
+    display: flex;
+    justify-content: center;
+}
+
+#imagen1 {
+    width: 28%;
+    margin: 15px;
+}
+
+#imagen2 {
+    width: 18%;
+    border-radius: 4px;
+    margin: 20px;
+}
+
+#imagen3 {
+    width: 28%;
+    margin: 20px;
+}
+
+/*diseño dispositivos*/
+@media (max-width: 768px) {
+    header {
+        height: 60px;
+    }
+    
+    nav img {
+        height: 60px;
+        width: auto;
+        padding: 0 10px;
+        line-height: 60px;
+    }
+    
+    .nav-menu {
+        flex-direction: column;   /*Para direccionar los items*/
+        align-items: center;
+        margin-right: 0px;
+        background-color: #5C6084;
+        position: fixed;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+        height: calc(100% - 60px);
+        overflow-y: auto;
+        
+        left: 100%;
+        transition: left 0.5s;
+
+    }
+    
+    nav ul li {
+        line-height: 70px;
+        
+    }
+    
+    nav ul li a:hover {
+        background: none;
+        color: #5362EE;
+    }
+
+    .icono-hambur {
+        display: block;
+    }
+
+    .nav-menu_visible{
+        left: 0%;
+    }
+
+    .informacion{
+        font-size: 15px;
+        padding: 15px;
+    }
+
+    .sliderAuto {
+        padding: 10px;
+    }
+
+    .piePagina {
+        display:  block;
+    }
+
+    .horarios {
+        background-color: #6F7BEC;
+        font-size: 15px;
+        width: 340px;
+        margin: 30px;
+        padding: 25px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .horarios #titulo {
+        font-size: 18px;
+    }
+
+    .horarios #subtitulo {
+        font-size: 16px;
+    }
+
+    .horarios p {
+        text-align: center;
+        margin-bottom: 4px;
+    }
+
+    .cartelera {
+        display: flex;
+        margin: 15px;
+        justify-content: center;
+    }
+
+    #imagen1 {
+        width: 28%;
+        margin: 15px;
+    }
+
+    #imagen2 {
+        width: 18%;
+        border-radius: 4px;
+        margin: 20px;
+    }
+
+    #imagen3 {
+        width: 28%;
+        margin: 20px;
+    }
+}
+
